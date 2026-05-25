@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phá Kén - Kết nối</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .checkin-container {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 100vh; text-align: center;
+        }
+        .question { font-family: var(--font-art); font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; }
+        .buttons { display: flex; gap: 20px; }
+        .btn-check { 
+            padding: 15px 40px; border-radius: 30px; border: 1px solid var(--gold); 
+            background: transparent; color: white; cursor: pointer; transition: 0.3s;
+        }
+        .btn-check:hover { background: var(--gold); color: #050b14; }
+    </style>
+</head>
+<body>
+    <div class="checkin-container">
+        <h1 class="question">Hôm nay, bạn khỏe không?</h1>
+        <div class="buttons">
+            <button id="btnYes" class="btn-check">Mình khỏe! ✨</button>
+            <button id="btnNo" class="btn-check">Hôm nay hơi buồn...</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btnYes').onclick = () => {
+            window.location.href = "index.html"; // Chuyển vào Galaxy
+        };
+        document.getElementById('btnNo').onclick = () => {
+            alert("Không sao cả, hãy để Vũ trụ này vỗ về cậu nhé...");
+            window.location.href = "index.html";
+        };
+    </script>
+</body>
+</html>
