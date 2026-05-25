@@ -32,15 +32,12 @@ body {
    2. THANH ĐIỀU HƯỚNG (NAVBAR & MENU) - HIỆU ỨNG CHUYỂN ĐỘNG ✨
    ========================================================= */
 .navbar {
-    position: fixed;
+    position: absolute; /* Thay từ fixed thành absolute */
     top: 0; left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(5, 10, 18, .45);
-    border-bottom: 1px solid rgba(255, 255, 255, .05);
-    
-    /* Hiệu ứng sương mờ hạ cánh mềm mại khi tải trang */
-    animation: navEntrance 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    background: transparent; /* Đổi thành transparent để không che mất hình nền */
+    border-bottom: none;     /* Bỏ viền dưới nếu có */
 }
 
 .nav-inner {
@@ -145,6 +142,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding-top: 0; /* Đảm bảo không có padding-top dư thừa */
 }
 
 .hero::before {
@@ -177,7 +175,7 @@ body {
 .brand-image-wrapper {
     position: relative; /* Quan trọng để bướm con bay đè lên đúng vị trí */
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto 20px auto;
     display: flex;
     justify-content: center;
@@ -187,16 +185,18 @@ body {
 
 /* 2. BƯỚM NỀN (BACKGROUND): Hiệu ứng "nhịp thở" (Pulse) mờ ảo */
 .brand-image {
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: block;
-    object-fit: contain;
-    object-position: center;
-    z-index: 1;
-    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    object-fit: cover;
     
-    /* Chuyển động tỏa sáng, phóng to thu nhỏ nhịp nhàng liên tục */
+    /* CHỈNH SỬA DÒNG NÀY: */
+    /* top 20% nghĩa là đẩy ảnh lên trên, lấy phần 20% từ đỉnh làm tâm */
+    object-position: top 20%; 
+    
+    z-index: 1;
+    mask-image: none;
+    -webkit-mask-image: none;
     animation: pulseBackground 4s ease-in-out infinite alternate;
 }
 
