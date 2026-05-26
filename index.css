@@ -4,7 +4,8 @@
 :root {
     --gold: #d4b06a;
     --gold-light: #f6d28d;
-    --font-art: 'Maglony', serif;
+    /* Đổi font-art sang Montserrat để dễ nhìn hơn */
+    --font-art: 'Montserrat', sans-serif; 
     --font-text: 'Montserrat', sans-serif;
 }
 
@@ -20,12 +21,11 @@
 }
 
 body {
-    /* Mặc định chữ thường đứng thẳng đứng, không nghiêng ríu mắt */
     font-family: var(--font-text);
     background: #050b14;
     color: white;
     overflow-x: hidden;
-    overflow-y: scroll; /* Khóa thanh cuộn dọc cố định tránh lệch Nav */
+    line-height: 1.6; /* Tăng khoảng cách dòng để dễ đọc hơn */
 }
 
 /* =========================================================
@@ -68,7 +68,6 @@ body {
 
 .logo-text {
     font-family: var(--font-art);
-    font-style: normal !important;
     color: var(--gold);
     font-size: 28px;
     white-space: nowrap;
@@ -78,7 +77,6 @@ body {
 
 .menu a {
     font-family: var(--font-art);
-    font-style: normal !important;
     color: white;
     text-decoration: none;
     position: relative;
@@ -302,17 +300,17 @@ body {
 ========================================================= */
 .main-title {
     font-family: var(--font-art);
-    font-style: normal !important;
     font-size: 68px; letter-spacing: 4px;
     text-shadow: 0 0 20px rgba(255,255,255,.08);
 }
 
 .subtitle {
-    font-family: var(--font-art);
-        font-size: 32px !important;
-        color: var(--gold) !important; /* Đổi màu vàng cho nổi bật */
-        margin-bottom: 30px;
-    }
+    font-family: var(--font-text); /* Đổi sang font dễ đọc */
+    font-size: 24px !important;
+    color: var(--gold) !important;
+    letter-spacing: 1px; /* Giảm khoảng cách chữ để dễ đọc hơn */
+    margin-bottom: 20px;
+}
 .line {
     width: 100%; max-width: 560px; height: 1px; margin: 26px auto;
     background: linear-gradient(to right, transparent, rgba(212, 176, 106, .45), transparent);
@@ -402,8 +400,7 @@ body {
 
 .card-content h3 {
     font-family: var(--font-art);
-    font-style: normal !important; /* KHÓA CỨNG: Thẳng đứng chữ tiêu đề card */
-    color: #ffe7a8; margin-bottom: 10px; font-size: 20px; letter-spacing: 1px;
+.subtitle:    color: #ffe7a8; margin-bottom: 10px; font-size: 20px; letter-spacing: 1px;
 }
 
 .card-content p { font-size: 13px; color: #888; font-style: normal !important; }
