@@ -26,12 +26,13 @@
     <div class="bg-butterfly"></div>
 
     <div class="hero-content">
+    <div class="brand-image-wrapper">
+        <img class="brand-image" src="./images/background_butterfly.png" alt="Phá Kén">
+        <img class="flying-butterfly" src="./images/butterfly.png" alt="Flying Butterfly">
+    </div>
+    <div class="line"></div>
 
-        <div class="brand-image-wrapper">
-            <img class="brand-image" src="./images/background_butterfly.png" alt="Phá Kén">
-            <img class="flying-butterfly" src="./images/butterfly.png" alt="Flying Butterfly">
-        </div>
-        <div class="line"></div>
+    <div id="phase1">
         <div class="subtitle">
             Dạo này bạn thế nào?
         </div>
@@ -40,8 +41,14 @@
             <button id="btnNo" class="btn-check">Tôi không ổn...</button>
         </div>
     </div>
-</section>
 
+    <div id="phase2" style="display: none; animation: fadeIn 0.8s;">
+        <div class="subtitle">Bạn đang thật sự ổn… hay chỉ quen nói rằng mình ổn?</div>
+    </div>
+</div>
+    
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="index.js"></script>
 
 </body>
