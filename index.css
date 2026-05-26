@@ -696,3 +696,37 @@ body {
     .buttons { flex-direction: column; gap: 15px; }
     .btn-check { width: 100%; }
 }
+/* Style cho khung thông báo */
+/* Khung thông báo bay bổng */
+.my-custom-popup {
+    border: 1px solid rgba(212, 176, 106, 0.4) !important;
+    border-radius: 20px !important;
+    backdrop-filter: blur(20px) !important; /* Hiệu ứng kính mờ */
+    box-shadow: 0 0 40px rgba(212, 176, 106, 0.1) !important;
+    padding: 20px !important;
+}
+
+/* Chữ nghệ thuật */
+.my-custom-text {
+    font-family: var(--font-art) !important; /* Font Maglony của cậu */
+    font-size: 22px !important;
+    color: var(--gold-light) !important;
+    text-shadow: 0 0 10px rgba(212, 176, 106, 0.3);
+}
+
+/* Ẩn nút nhấn nếu cậu muốn tạo cảm giác nhẹ nhàng */
+.swal2-confirm {
+    border: 1px solid var(--gold) !important;
+    font-family: var(--font-text) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#phase2 {
+    text-align: center; /* Đảm bảo căn giữa */
+}
+
